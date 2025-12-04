@@ -6,7 +6,7 @@ export default {
 	    };
 
 		const response = await env.AI.run(
-			"@cf/stabilityai/stable-diffusion-xl-base-1.0",
+			"@cf/llava-hf/llava-1.5-7b-hf",
 			inputs,
 		);
 
