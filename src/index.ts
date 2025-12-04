@@ -1,8 +1,9 @@
 export default {
 	async fetch(request, env) {
-		const inputs = {
-			prompt: url.searchParams.get("text"), // "cyberpunk cat",
-		};
+		const url = new URL(request.url);
+	    const inputs = {
+	      prompt: url.searchParams.get("text") || "cyberpunk cat",
+	    };
 
 		const response = await env.AI.run(
 			"@cf/stabilityai/stable-diffusion-xl-base-1.0",
