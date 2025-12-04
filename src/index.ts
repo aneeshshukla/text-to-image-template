@@ -1,7 +1,7 @@
 export default {
 	async fetch(request, env) {
 		const inputs = {
-			prompt: url.searchParams.get("text"); // "cyberpunk cat",
+			prompt: url.searchParams.get("text"), // "cyberpunk cat",
 		};
 
 		const response = await env.AI.run(
